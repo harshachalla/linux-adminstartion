@@ -64,8 +64,76 @@ from one system to another system,
 ------> A terminal emulator allows a host computer to access another computer, including remote ones, through either a command-line interface or a graphical one. The communication is made possible using protocols such as Telnet and SSH.
 
 
+# 3rd july work
+
+
+
+# Linux directory structure
+
+#### The Linux directory structure is like a tree.
+
+----> some of the most common top level directories,that you'll see when using the Linux operating system.
+
+###### The base of the Linux file system hierarchy begins at the root. Directories will start to branch off the root;but everything starts at "root".
+
+### The directory separator in Linux is symbolized by a forward slash, '/'.
+
+
+------> If you hear someone say look in slash or that file is in slash,they're referring to the root directory.
+
+
+
+# some of the most common top level directories
+
+###### 'bin' or '/bin' is where you'll find binary files or executable files.
+
+###### '/etc' or 'etsy' is where you'll find configuration files.
+
+###### '/home' is where user home directories live.
+
+
+###### 'opt' is where optional or third party software lives.(Opt is for software that is not bundled with the operating system.)
+
+-----> For example Google earth is not part of the standard Linux operating system.So Google earth gets installed in opt.
 
 
 
 
+###### '/tmp' is called temp and it's for temporary space.(Now temp is a great place to store temporary files)
 
+
+
+
+###### '/usr' is called userand this is where user related programs live.Each one of these directories can have subdirectories.
+
+
+###### '/var', also called, var, is for variable data.Think of things that change often.
+
+
+--->Some Linux operating systems use /srv
+	as a location to place data that is served by the Linux server.
+
+---->For example, web files would be in /srv/www
+
+----->or if it's an FTP server,
+
+
+------>Let's take this fictitious application called, 'myapp' for example.
+Even though the main 'myapp' program
+gets installed on /opt/myapp/,
+where maybe the binaries live and the libraries live,
+you'll also see that you can install files
+at /etc/opt/myapp.and that's where you'd find the configuration files.
+maybe the files would be located in /srv/ftp.
+
+----->The log files would be in /var/opt/myapp.
+
+
+------>Sometimes when applications get installed,
+they're not given their own directory structure,
+they're installed in the shared manner.
+So maybe, my app gets installed in /usr/local.
+In this case, it would be /usr/local/bin/myapp
+and the configuration file could be /usr/local/etc/myapp.com.
+
+----> /usr/local/bin will not only contain my app,
