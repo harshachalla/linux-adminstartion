@@ -163,3 +163,28 @@ and the configuration file could be /usr/local/etc/myapp.com.
 #The super user on a Linux system, is also called root; it's the root account.
 
 # The Tilde(~) is a shorthand way of representing a home directory.
+
+
+# Basic Linux Commands
+
+## 'ls' --->  list directories
+
+## 'ls -l' ---> list directory contents.
+
+## 'cd filename' -----> is the change directory command.
+
+
+## 'cd'  --->take u to home directory
+
+##  'pwd' command displays the present working directory
+
+## 'cat' - concatenate files. Really what cat does is - it displays the contents of files.
+
+## 'echo' displays arguments to the screen.
+
+
+##  'man -ls' to display the documentation
+
+## To exit or log out of your shell, use the 'exit' command.
+
+## Finally, 'clear' clears the screen.
