@@ -176,6 +176,8 @@ and the configuration file could be /usr/local/etc/myapp.com.
 
 ## 'cd'  --->take u to home directory
 
+## 'cd -'  --->take u to previous directory
+
 ##  'pwd' command displays the present working directory
 
 ## 'cat' - concatenate files. Really what cat does is - it displays the contents of files.
@@ -188,3 +190,47 @@ and the configuration file could be /usr/local/etc/myapp.com.
 ## To exit or log out of your shell, use the 'exit' command.
 
 ## Finally, 'clear' clears the screen.
+
+
+
+# Working with directories And commands
+
+
+## 'cd..' is go to the parent directory.
+
+## 'cd..' is go to the Present directory.
+
+
+## 'echo $oldpwd' is go to the previous hold directory.
+
+## 'slash' is a directory separator.
+
+## 'mkdir' is make a new directory
+
+## 'mkdir [-p]' here -p is refer as parent directory --->example : mkdir -p dirname1/dirname2
+
+## 'rm-rf dir1' If we want to recursively remove them, we can use 'rm-rf dir1'
+
+##'rmdir dir1' to remove directory
+
+
+# understanding listing 
+
+## 'ls -la , ls -l -a , ls -al , ls -a -l' If we want to see a long listing output that includes hidden files
+
+		--------> You can run '-l' for long listing and '-a' for all files.
+
+
+## 'ls -F' You can use  to reveal file types. 
+
+
+#'ls -F' appends a character to a file or directory name that tells you what it is.
+### So if it ends in '/' or forward slash, then it's a <u>"directory".</u>
+### If it ends in '%', that's a link.
+### A star or asterisk (*) means that it's executable.
+
+## 'ls -t'.If you want to list files sorted by time
+## 'ls -r'.If you want to list files sorted by reverse
+
+## 'ls -latr' This provides a long listing that includes all files sorted by time in reverse.
+
