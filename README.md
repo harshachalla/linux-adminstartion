@@ -136,4 +136,30 @@ So maybe, my app gets installed in /usr/local.
 In this case, it would be /usr/local/bin/myapp
 and the configuration file could be /usr/local/etc/myapp.com.
 
-----> /usr/local/bin will not only contain my app,
+----> /usr/local/bin will not only contain my app.
+
+
+# About Shell
+
+#### The shell is the default user interface to a Linux system.
+
+##### When you log in to a Linux server over the network,the shell is a program that is startedand it acts as your default interface to the system.
+
+###The graphical user interface (log in to a Linux server with out network ) on a Linux system is also called a shell,
+ ## "it's a graphical shell".
+
+
+ ###The shell is really nothing more than an application or program that takes the commands you feed it, and it executes those commands for you.
+
+
+
+ ----->In this case, Linux as we are at Linux server.
+
+# At the end of the prompt you'll see a dollar sign.This is an indication that you're using the system,as a "normal user " as opposed to a super user.
+
+# The super user shell prompt ends,typically with a "pound sign (#)".
+
+
+#The super user on a Linux system, is also called root; it's the root account.
+
+# The Tilde(~) is a shorthand way of representing a home directory.
