@@ -245,4 +245,9 @@ and the configuration file could be /usr/local/etc/myapp.com.
 
 # 4th july work
 
+# File and Directory Permissions
+
+
+1. Here is some output from an 'ls -l' command.And if you look at the permissions string **(-rw-r--r--)**
+
 
