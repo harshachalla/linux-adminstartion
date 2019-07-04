@@ -263,6 +263,42 @@ and the configuration file could be /usr/local/etc/myapp.com.
 
 * and execute which is x.
 
-`code`
+3. `-r--rw-rwx` Observe this First charecter represents **type**  that means in `-r--rw-rwx` **-** is a **file type**
+	* Observe this **Second 3 charecter** represents **user**  that means in `-r--rw-rwx` **r--** is a **User Permissions** . Represents with letter **u**
+	* Observe this **third 3 charecter** represents **group**  that means in `-r--rw-rwx` **rw-** is a **group Permissions** . Represents with letter **g**
+	* Observe this **Final 3 charecter** represents **other**  that means in `-r--rw-rwx` **rwx** is a **other Permissions**. Represents with letter **o**
+
+	4. if a particular permission is not granted, a hyphen will take its place.
+	* Permissions are also known as modes.
+	* That's why the command you used to change permissions is called `chmod`, which is short for **change mode**
+
+	5. We can change a file permissions by using following commands
+
+	* `chmode u+w harsha.txt`  results `-rw-rw-rwx`
+	* ` chmode g+x harsha.txt` results `-rw-rwxrwx`
+	* ` chmode o-w harsha.txt` results `-rw-rw-rw-`
+	* ` chmode u+wx harsha.txt` results `-rwxrw-rwx`
+
+	**Above commands are based by using symbolic(u,g,o) permissions**
+
+	**Numeric Commands based permissions**
 
 
+	**Here are the most commonly used permissions.** 
+
+* So 700 ensures that a file can be read, edited and executed by the owner and no one else on the system will have access to that file.
+* The 755 permission allows everyone on the system to execute the file but only the user or the owner of the file can edit that file.
+
+* 664 allows a group of people to modify the file and let others read it.
+
+* 660 allows a group of people to modify the file and not let others read it.
+
+* 644 allows everyone on the system to read the file but only the user or the owner of that file can edit that file.
+
+
+
+	* ` chmode 700 harsha.txt` results `-rwx-------`
+	* ` chmode 755 harsha.txt` results `-rwx-r-x--x`
+	* ` chmode 664 harsha.txt` results `-rw-rw-r--`
+
+* similarly so many numeric permissions are there 
