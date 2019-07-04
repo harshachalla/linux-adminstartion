@@ -303,3 +303,26 @@ and the configuration file could be /usr/local/etc/myapp.com.
 
 * similarly so many numeric permissions are there 
 
+# find files and directories.
+
+1. If you don't tell find what to look for, it just returns all the files that are in your current directory.and all the subdirectories below that directory.
+  
+  * In terminal when u type ` find` results all the files that are in your current directory,and all the subdirectories below that directory.
+
+  * ` find . -name Downloads` here **.** indicates that u r in current directory , and **-name** that indicates what the file/directory name u r searching for, so here i am serching for "Downloads"  
+   * ` find . -iname Downloads` here **i** is for to ignore the name case either it may be small or capital letters it will show results
+
+   **You can search for files by modification time by using the '-mtime' option to find.**
+
+   * Let's look for files that are more than 10 days old, but less than 13 days old in the current directory.
+   **Command is**   ` find . -mtime +10 -mtime -13` 
+
+   **You can also search for files based on size using '-size'.**
+   * Let's look for files that are more than **1kb size**.
+   **Command is** ` find . -size +1k`
+     * Let's look for files that are more than **1mb size**.
+   **Command is** ` find . -size +1M`
+     * Let's look for files that are more than **1Gb size**.
+   **Command is** ` find . -size +1G`
+
+
