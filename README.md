@@ -234,3 +234,15 @@ and the configuration file could be /usr/local/etc/myapp.com.
 
 ## 'ls -latr' This provides a long listing that includes all files sorted by time in reverse.
 
+
+## If any file is with spaces 
+#### for example u have a file called harsha file.txt then u need to find the file so u will use cmd "ls -l" , as a result u wont get the file in list because in linux spaces are not allowed 
+## 	to find these space named files we use cmd as 
+#ls -l "harsha file.txt"
+
+..*  'ls -d' lists directory names not contents.
+
+
+#4th july work
+
+
