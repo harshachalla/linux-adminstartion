@@ -303,18 +303,3 @@ and the configuration file could be /usr/local/etc/myapp.com.
 
 * similarly so many numeric permissions are there 
 
-
-
-
-					You can run '-l' for long listing and '-a' for all files.
-
-					You can run '-l' for long listing and '-a' for all files.
-
-					You can run '-l' for long listing and '-a' for all files.
-
-					You can run '-l' for long listing and '-a' for all files.
-
-					You can run '-l' for long listing and '-a' for all files.
-
-					You can run '-l' for long listing and '-a' for all files.
-
