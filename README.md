@@ -250,5 +250,8 @@ and the configuration file could be /usr/local/etc/myapp.com.
 
 1. Here is some output from an 'ls -l' command.And if you look at the permissions string **(-rw-r--r--)**
 + the first character will indicate
+ ...whether it's a regular **file** by beginning with a **'-'**,
+...or it will begin with the **'d'** if it's a **directory**,
+...or an **'l'** if it's a **symbolic link.**
 
 
