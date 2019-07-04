@@ -238,11 +238,11 @@ and the configuration file could be /usr/local/etc/myapp.com.
 ## If any file is with spaces 
 #### for example u have a file called harsha file.txt then u need to find the file so u will use cmd "ls -l" , as a result u wont get the file in list because in linux spaces are not allowed 
 ## 	to find these space named files we use cmd as 
-#ls -l "harsha file.txt"
+# ls -l "harsha file.txt"
 
-..*  'ls -d' lists directory names not contents.
+# 'ls -d' lists directory names not contents.
 
 
-#4th july work
+# 4th july work
 
 
