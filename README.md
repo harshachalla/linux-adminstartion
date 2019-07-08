@@ -329,6 +329,105 @@ and the configuration file could be /usr/local/etc/myapp.com.
 
    **Command is** ` find . -size +1G`
 
-   h
+   
+#  about VI editor
+
+1.  VI(Visual Instrument), you can even use vi mode for editing shell commands.
+	* vi has the concept of modes.
+	* You are always working in one of three modes -
+
+	* **command mode**
+	* **insert mode** 
+	* **line mode.**
+
+	* **k** goes up one line, **j** down.
+
+	* **h** left, '**l** right one character.
+
+	* To move right one word, **w**,
+
+	* **b** moves back one word or left one word.
+
+	* The **^** symbol takes you to the beginning of the line
+
+	* while the **$** symbol takes you to the end of the line.
 
 
+	* In order to insert text in a file, enter vi's insert mode.
+
+	* Do this by pressing **i**
+
+	* **'I', 'a', or 'A'.**
+
+	* **'i'** inserts text at the current cursor position.
+
+	* **'I'** inserts text at the beginning of the line.
+
+	* **'a'** appends after the cursor position,
+
+	* **'A'** appends to the end of the line.
+
+	* to write the file or save the file, type **:w**, enter.
+	* To force a file to be saved, type **:w!**.
+
+	* To quit, **:q**, 
+	* to force quit, **:q!**.
+
+	* To save the file and quit, or write and quit, **:wq!**.
+
+	* And **:x** is the same as **:wq**
+
+	* if you want to go to the line 15 in the file, type **:15** enter.
+
+	* To go to the last line of the file, type **:$**.
+
+	* If you want to see line numbers, type **:set nu**.
+
+	* And to turn off line numbering, **:set nonu**.
+
+	* To get help, type **:help** and the command that you're interested in.
+
+	* Again the modes in vi or command mode which you can enter by hitting the **escape key.**
+
+	* While in command mode you can use **x** to delete a character.
+
+	* **dw** to delete a word,
+
+	* **dd** to delete a line
+
+	* and **D** to delete the remaining text on the line.
+
+
+	* To replace text, type **r** for just one character,
+
+	* **cw** to change an entire word,
+
+	* **cc** to change in entire line,
+
+	* **c$** to change the text from the current position to the end of the line.
+
+	* You can also use **C** for that.
+
+	* The **~** command reverses the case of the character.
+
+	* To yank or copy the current line, type **yy**
+
+	* To yank a position type **y** and a position character.
+
+	* For instance, to yank a word, type **yw**
+
+	* If we want to repeat this, you could yank 3 words with **y3w**.
+
+	* **p** will paste the most recently deleted or yanked text.
+
+	* The undo command in vi is **u**
+
+	* and the redo command is **ctrl-R**.
+
+	* To start a forward search, type **/** and a search pattern and hit enter.
+
+	* To go to the next match, type **n**.
+
+	* To go to the previous match, type **N**.
+
+	* To start a reverse search, use the '**?**
