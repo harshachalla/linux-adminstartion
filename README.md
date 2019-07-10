@@ -490,3 +490,15 @@ similarlly.......
 * **du -k** Display sizes in Kilobytes.
 * **du -h** Display sizes in human readable format.
 
+# 5th july Work
+
+
+### Wildcards
+
+**A wildcard is a character or a string that is used to match file and directory names.**
+
+* Here are the 2 main wildcards.They are the **asterisk(*)** and the **question mark(?)**.
+
+* For example, we could use ***.txt** to find all the files that end in '.txt'.
+
+* If you wanted to list all the files that start with the letter **a**, then use **a***.
