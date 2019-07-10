@@ -502,3 +502,30 @@ similarlly.......
 * For example, we could use ***.txt** to find all the files that end in '.txt'.
 
 * If you wanted to list all the files that start with the letter **a**, then use **a***.
+
+* If you want to find all the files that start with an **a** and end in **.txt**, then use **a*.txt**.
+
+● Use two characters separated by a hyphen to
+create a range in a character class.
+● [a-g]*
+○ Matches all files that start with a, b, c, d, e, f, or g.
+● [3-6]*
+○ Matches all files that start with 3, 4, 5 or 6.
+
+* If you want to find all the files that start with an **a-d**, then use **ls [a-d]***
+* we can find files that u remember first letter and last letter ,then use **ls firstletter[abcd]lastletter** 
+ Ex:firstletter is c , last letter is t, then **ls c[aeiou]t**  
+
+ * * - matches zero or more characters.
+* *.txt
+* a*
+* a*.txt
+	* ? - matches exactly one character.
+* ?.txt
+* a?
+* a?.txt
+
+* [!] - Matches any of the characters NOT included between the brackets. Matches exactly one character.
+○ [!aeiou]*
+■ baseball
+■ cricket
