@@ -431,3 +431,62 @@ and the configuration file could be /usr/local/etc/myapp.com.
 	* To go to the previous match, type **N**.
 
 	* To start a reverse search, use the '**?**
+	  
+# Delete , Copy , move files
+* want to delete some of them.To do that, use the **rm** command.
+
+**rm filename** is the simplest form of this command.
+
+* If you want to remove a directory and its contents recursively, use '**rm -r** and the name of the directory.
+
+* If you want a forced removal, use **rm-f**.
+
+* To copy files, use the **cp** command.
+
+* If you want to create a copy of a file, you just run **cp src_file destination_file**.
+
+* To run cp in interactive mode, use **cp -i**.If the destination file exists, cp will prompt you before it overwrites the file.
+
+* If you use **cp -r source_directory destination**,'cp' will recursively copy source directory into the destination directory.If the destination directory doesn't exist,it will create the destination directory.with the contents of the source directory.
+
+* To move or rename files, use the **mv** command.
+
+* If you were to run **mv source destination**, 'move' will move the source into the destination. Otherwise, source 	will be **renamed destination.**
+
+* If we run **mv file1 file2**,that will rename file1 to file2.It will overwrite file2.
+
+* If you want to do this in interactive mode, use **-i**.In this case it says, 'Hey there's a file that already exist. You want to overwrite it or not'?
+
+* **sort** is used for sorting
+
+* You can use sort with a **sort -k2**(removes the 2nd line,if u provide 3 it removes 3rd line) option and supply a field, so you can sort by a different field than the first field.
+
+* **sort -r** sorts in reverse order
+
+* and **sort -u** removes duplicate lines
+
+* You may want to create a copy or back up of a group of files.You may also have several files that you want to transfer at once or transfer as a set.In these situations, **tar** can help.
+
+* **tar cf what file name u r going to give.tar which file u r going to compress**  Create a tar archive.
+* **tar tf  which tar file u want to see** it shows the directory and files 
+
+similarlly.......
+
+* **x** Extract files from the archive.
+* **v** Be verbose.
+* **z** Use compression.
+
+### Compressing Files To Save Space
+
+* **gzip filename** Compress files.
+* **gunzip filename** Uncompress files.
+* **gzcat filename** Concatenates compressed files.
+* **zcat filename** Concatenates compressed files.
+
+
+### Disk Usage
+
+* **du** Estimates file usage.
+* **du -k** Display sizes in Kilobytes.
+* **du -h** Display sizes in human readable format.
+
