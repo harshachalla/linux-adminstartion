@@ -507,10 +507,10 @@ similarlly.......
 
 ● Use two characters separated by a hyphen to
 create a range in a character class.
-● [a-g]*
-○ Matches all files that start with a, b, c, d, e, f, or g.
-● [3-6]*
-○ Matches all files that start with 3, 4, 5 or 6.
+
+● [a-g]* ----->Matches all files that start with a, b, c, d, e, f, or g.
+
+● [3-6]*   -----> Matches all files that start with 3, 4, 5 or 6.
 
 * If you want to find all the files that start with an **a-d**, then use **ls [a-d]***
 * we can find files that u remember first letter and last letter ,then use **ls firstletter[abcd]lastletter** 
