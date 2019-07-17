@@ -525,7 +525,44 @@ create a range in a character class.
 * a?
 * a?.txt
 
-* [!] - Matches any of the characters NOT included between the brackets. Matches exactly one character.
-○ [!aeiou]*
-■ baseball
-■ cricket
+* Named Character Classes
+● [[:alpha:]]
+● [[:alnum:]]
+● [[:digit:]]
+● [[:lower:]]
+● [[:space:]]
+● [[:upper:]]
+
+
+### Comparing the Contents of Files
+* **diff file1 file2**   Compare two files.
+* **sdiff file1 file2**  Side-by-side comparison.
+* **vimdiff file1 file2**    Highlight differences in vim.
+
+### vimdiff commands
+* **Ctrl-w w** Go to next window
+* **:q** Quit (close current window)
+* **:qa** Quit all (close both files)
+* **:qa!** Force quit all
+
+
+### Searching in Files
+
+#### The grep Command
+ * grep Display lines matching a pattern.
+ * grep pattern filename **EX: grep user table.txt**
+
+
+ #### grep Options
+
+* **-i** Perform a search, ignoring case.
+* **-c** Count the number of occurrences in a file.
+* **-n** Precede output with line numbers.
+* **-v** Invert Match. Print lines that don’t match.
+
+#### use of file command
+	* **file** file_name Display the file type.and shows all the information of file_name
+
+#### Searching for Text in Binary Files
+
+* use **strings filename** to Display printable strings.
