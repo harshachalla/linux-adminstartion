@@ -1,264 +1,568 @@
-# linux-interview-questions
+# linux-adminstartion
 
-**1) What is Linux?** 
-* Linux is an operating system based on UNIX and was first introduced by Linus Torvalds.
-* It is based on the Linux Kernel and can run on different hardware platforms manufactured by Intel, MIPS, HP, IBM Etc..
 
-**2) What is the difference between UNIX and LINUX?**
-* Unix originally began as a propriety operating system from Bell Laboratories, which later on spawned into different commercial versions.
-* Linux is free, open source and intended as a non-propriety operating system for the masses.
 
-**3) What is BASH?**
-* BASH is short for Bourne Again SHell. It was written by Steve Bourne as a replacement to the original Bourne Shell (represented by /bin/sh).
 
-**4) What is Linux Kernel?**
+linux-distributions:
 
-* The Linux Kernel is a low-level systems software whose main role is to manage hardware resources for the user.
-* It is also used to provide an interface for user-level interaction.
+--->distribution is simply a collection of software and applications bundled,together and distributed as a single operating system. For example, one Linux
 
-**5) What is LILO?**
 
-* LILO is a boot loader for Linux. 
-* It is used mainly to load the Linux operating system into main memory so that it can begin its operations.
+---.>Distribution shortened to distro. Also, some people refer to the various
+distributions as flavors. 
 
-**7) What is the advantage of open source?**
+--->What every Linux distribution has in common,
+	though, is the Linux kernel. Again, typically when the term Linux is used it refers to the
+	Linux Operating System as a whole.
 
-* Open source allows you to distribute your software, including source codes freely to anyone who is interested. 
-* People would then be able to add features and even debug and correct errors that are in the source code.
-* They can even make it run better and then redistribute these enhanced source code freely again.
-* This eventually benefits everyone in the community.
+--->However, it can refer to just the Linux Kernel as well. 
 
-**8) What is the basic difference between BASH and DOS?**
+--->The Linux kernel is the
+	core or the heart of the Operating System. It’s the layer that sits between
+	the hardware and applications. 
 
-The key differences between the BASH and DOS console lie in 3 areas:
+--->Said another way, it’s the intermediary
+	between software and hardware.
 
-- BASH commands are case sensitive 
- * while DOS commands are not;
 
-- Under BASH, / character is a directory separator and \ acts as an escape character. 
-* Under DOS, / serves as a command argument delimiter and \ is the directory separator
+*opening terminal in centos
 
+--->click--->applications--->systemtools--->terminal.
 
-**9) Describe the root account.**
 
-* The root account is like a systems administrator account and allows you full control of the system.
-* Here you can create and maintain user accounts, assigning different permissions for each account.
-* It is the default account every time you install Linux.
+--->toexit from the terminal --->just type "exit"
 
-**10) What is CLI?**
 
-* CLI is short for Command Line Interface.
-* This interface allows the user to type declarative commands to instruct the computer to perform operations.
-* CLI offers greater flexibility.
 
-**11) How do you open a command prompt when issuing a command?**
 
-* To open the default shell (which is where the command prompt can be found), press **Ctrl-Alt-F1**.
-* This will provide a command line interface (CLI) from which you can run commands as needed.
 
-**12) How can you find out how much memory Linux is using?**
+# About SSH
 
-* From a command shell, use the **"concatenate"** command: **cat /proc/meminfo** for memory usage information. 
-* You should see a line starting something like Mem: 64655360, etc.
-* This is the total memory Linux thinks it has available to use.
+--->If you're going to connect to a Linux system over the network,
+	more than likely you're going to use SSH.
 
-* You can also use commands
+## SSH stands for Secure Shell.
 
-```free - m
+### SSH is a network protocol.
 
-vmstat
+It's primary purpose is to allow you to connect,
+from one system to another system, 
+## "securely over a network".
 
-top
 
-htop
-```
 
-to find current memory usage
 
+----> In order to connect to Linux over the network,we're going to need a terminal emulator,that also acts as an SSH 	client.
 
-**13) What is the maximum length for a filename under Linux?**
+---->For windows, the most popular SSH client and terminal emulator,
+	is a program called, PuTTY.
 
-* Any filename can have a maximum of 255 characters.
-* This limit does not include the path name, so therefore the entire pathname and filename could well exceed 255 characters.
 
-**14) What is the pwd command?**
 
-* to find **present work directory**
+# Terminal Emulator
 
-**15) What are environmental variables?**
+------> A terminal emulator allows a host computer to access another computer, including remote ones, through either a command-line interface or a graphical one. The communication is made possible using protocols such as Telnet and SSH.
 
-* Environmental variables are global settings that control the shell's function as well as that of other Linux programs.
-* Another common term for environmental variables is global shell variables.
 
-**16) What are the different modes when using vi editor?**
+# 3rd july work
 
-* There are 3 modes under vi:- Command mode – this is the mode where you start in
-* - Edit mode – this is the mode that allows you to do text editing
-* - Ex mode – this is the mode wherein you interact with vi with instructions to process a file
 
 
-**17) What is grep command?**
+# Linux directory structure
 
-* grep a search command that makes use of pattern-based searching.
-* It makes use of options and parameters that are specified along with the command line and applies this pattern in searching the required file output.
+#### The Linux directory structure is like a tree.
 
-**18) What are the contents of /usr/local?**
+----> some of the most common top level directories,that you'll see when using the Linux operating system.
 
-* It contains locally installed files.
-* This directory matters in environments where files are stored on the network.
-* Specifically, locally-installed files go to /usr/local/bin, /usr/local/lib, etc.). Another application of this directory is that it is used for software packages installed from source, or software not officially shipped with the distribution.
+###### The base of the Linux file system hierarchy begins at the root. Directories will start to branch off the root;but everything starts at "root".
 
+### The directory separator in Linux is symbolized by a forward slash, '/'.
 
-**19) How do you terminate an ongoing process?**
 
-* Every process in the system is identified by a unique process id or pid.
-* Use the kill command followed by the pid to terminate that process.
-* To terminate all process at once, use kill 0.
+------> If you hear someone say look in slash or that file is in slash,they're referring to the root directory.
 
-**20) Write a command that will look for files with an extension "c", and has the occurrence of the string "apple" in it.**
 
-```
- Find ./ -name "*.c" | xargs grep –i "apple"
-```
 
-**21) Write a command that will display all .txt files, including its individual permission.**
+# some of the most common top level directories
 
-```
-ls -al *.txt
-```
+###### 'bin' or '/bin' is where you'll find binary files or executable files.
 
-**22) Write a command that will do the following:**
+###### '/etc' or 'etsy' is where you'll find configuration files.
 
--look for all files in the current and subsequent directories with an extension c,v
--strip the,v from the result (you can use sed command)
--use the result and use a grep command to search for all occurrences of the word ORANGE in the files.
+###### '/home' is where user home directories live.
 
-```
-Find ./ -name "*.c,v" | sed 's/,v//g' | xargs grep "ORANGE"
-```
 
-**23) What is the command to calculate the size of a folder?**
+###### 'opt' is where optional or third party software lives.(Opt is for software that is not bundled with the operating system.)
 
-* To calculate the size of a folder uses the command **du –sh folder1.**
+-----> For example Google earth is not part of the standard Linux operating system.So Google earth gets installed in opt.
 
-**24) How can you find the status of a process?**
 
-* Use the command
 
-```
-ps ux
-```
-**25) How can you check the memory status?**
 
-You can use the command
+###### '/tmp' is called temp and it's for temporary space.(Now temp is a great place to store temporary files)
 
-* **free -m** to display output in MB
 
-* **free -g** to display output in GB
 
-**26) How can you append one file to another in Linux?**
 
-* To append one file to another in Linux you can use command **cat file2 >> file 1.** 
-* The operator >> appends the output of the named file or creates the file if it is not created.
-* While another command **cat file 1 file 2 > file 3** appends two or more files to one.
+###### '/usr' is called userand this is where user related programs live.Each one of these directories can have subdirectories.
 
-**27) Explain how you can find a file using Terminal?**
 
-* To find a file you have to use a command, 
-```
-find . –name "process.txt" .
-```
- It will look for the current directory for a file called process.txt.
+###### '/var', also called, var, is for variable data.Think of things that change often.
 
-**28) Explain how you can create a folder using Terminal?**
 
-* To create a folder, you have to use command **mkdir.** It will be something like these: ~$ mkdir Guru99
+--->Some Linux operating systems use /srv
+	as a location to place data that is served by the Linux server.
 
-**29) Explain how you can view the text file using Terminal?**
+---->For example, web files would be in /srv/www
 
-* To view the text file, go to the specific folder where the text files are located by using the command cd and then type less filename.txt.
+----->or if it's an FTP server,
 
-```
-less filename.txt
-```
 
-**30) Explain how to enable root logging in Ubuntu?**
+------>Let's take this fictitious application called, 'myapp' for example.
+Even though the main 'myapp' program
+gets installed on /opt/myapp/,
+where maybe the binaries live and the libraries live,
+you'll also see that you can install files
+at /etc/opt/myapp.and that's where you'd find the configuration files.
+maybe the files would be located in /srv/ftp.
 
-* The command which enables root logging is
+----->The log files would be in /var/opt/myapp.
 
-```
-#sudo sh-c 'echo "greater-show-manual-login=true" >>/etc/lightdm/lightdm.conf'
-```
 
-**31) Explain how to uninstall the libraries in Linux?**
+------>Sometimes when applications get installed,
+they're not given their own directory structure,
+they're installed in the shared manner.
+So maybe, my app gets installed in /usr/local.
+In this case, it would be /usr/local/bin/myapp
+and the configuration file could be /usr/local/etc/myapp.com.
 
-* To uninstall the libraries in Linux, you can use command 
-```
-sudo apt-get remove library_name
-```
+----> /usr/local/bin will not only contain my app.
 
-**32) What is tail command in Linux ?**
 
-* tail command displays the last part of a file. Generally, users don’t need every log line to troubleshoot. Instead, you want to check what your logs say about the most recent request to your application.
+# About Shell
 
-tail Example:
-```
-$ tail -n 100 /var/log/httpsd/access_log
-```
+#### The shell is the default user interface to a Linux system.
 
-**33) How do you combine two lines from two sorted files in Linux ?**
+##### When you log in to a Linux server over the network,the shell is a program that is startedand it acts as your default interface to the system.
 
-* Use this command: 
-```
-comm file1 file2.
-```
+###The graphical user interface (log in to a Linux server with out network ) on a Linux system is also called a shell,
+ ## "it's a graphical shell".
 
-**34) What is the core of Linux Operating System ?**
 
-* Kernel is the core of Linux Operating System.
-* Shell is a command Line Interpreter.
-* Command is user Instruction to Computer.
-* Script is collection of commands stored in a file 
-* Terminal is a command Line Interface.
+ ###The shell is really nothing more than an application or program that takes the commands you feed it, and it executes those commands for you.
 
-**35) What is **df -h** command ?**
 
-* This command show free space on mounted file systems.
 
-**36) What is the difference between locate and slocate command ?**
+ ----->In this case, Linux as we are at Linux server.
 
-* The slocate looks for the **files that user have access**. 
-* whereas locate will search for the **file with updated result**.
+# At the end of the prompt you'll see a dollar sign.This is an indication that you're using the system,as a "normal user " as opposed to a super user.
 
-**37) How to create a new file and modify an existing file in vi editor ?**
+# The super user shell prompt ends,typically with a "pound sign (#)".
 
-* Find below the commands with the description
 
-**vi filename**: This is the command used to create a new file as well as modify an existing file.
-**View filename**: This command opens an existing file in read-only mode.
-**X**: This command deletes the character which is under the cursor or before the cursor location.
-**dd**: This command is used to delete the current line.
+#The super user on a Linux system, is also called root; it's the root account.
 
-**38) Why we use LINUX ?**
+# The Tilde(~) is a shorthand way of representing a home directory.
 
-* LINUX is used widely because it is completely different from other operating systems where every aspect comes with something extra i.e. some additional features. Some of the major reasons to use LINUX are listed below
 
-* It is an open source operating system where programmers get the advantage of designing their own custom OS
+# Basic Linux Commands
 
-* Software and the server licensing required to install Linux is completely free and can be installed on many computers as required
-* It has low or minimum but controllable issues with viruses, malware, etc
-* It is highly secured and supports multiple file systems.
+## 'ls' --->  list directories
 
-**39) Advantages of CLI**
+## 'ls -l' ---> list directory contents.
 
-Very flexible
-Can easily access commands
-Much faster and easier to use by expert
-Does not use much CPU processing time.
+## 'cd filename' -----> is the change directory command.
 
-**40) Disadvantages of CLI**
 
-Learning and remembering type commands is hard.
-Have to be typed precisely.
-Can be very confusing.
-Surfing web, graphics, etc are few tasks which are hard or impossible to do on the command line.
+## 'cd'  --->take u to home directory
+
+## 'cd -'  --->take u to previous directory
+
+##  'pwd' command displays the present working directory
+
+## 'cat' - concatenate files. Really what cat does is - it displays the contents of files.
+
+## 'echo' displays arguments to the screen.
+
+
+##  'man -ls' to display the documentation
+
+## To exit or log out of your shell, use the 'exit' command.
+
+## Finally, 'clear' clears the screen.
+
+
+
+# Working with directories And commands
+
+
+## 'cd..' is go to the parent directory.
+
+## 'cd..' is go to the Present directory.
+
+
+## 'echo $oldpwd' is go to the previous hold directory.
+
+## 'slash' is a directory separator.
+
+## 'mkdir' is make a new directory
+
+## 'mkdir [-p]' here -p is refer as parent directory --->example : mkdir -p dirname1/dirname2
+
+## 'rm-rf dir1' If we want to recursively remove them, we can use 'rm-rf dir1'
+
+##'rmdir dir1' to remove directory
+
+
+# understanding listing 
+
+## 'ls -la , ls -l -a , ls -al , ls -a -l' If we want to see a long listing output that includes hidden files
+
+		--------> You can run '-l' for long listing and '-a' for all files.
+
+
+## 'ls -F' You can use  to reveal file types. 
+
+
+#'ls -F' appends a character to a file or directory name that tells you what it is.
+### So if it ends in '/' or forward slash, then it's a <u>"directory".</u>
+### If it ends in '%', that's a link.
+### A star or asterisk (*) means that it's executable.
+
+## 'ls -t'.If you want to list files sorted by time
+## 'ls -r'.If you want to list files sorted by reverse
+
+## 'ls -latr' This provides a long listing that includes all files sorted by time in reverse.
+
+
+## If any file is with spaces 
+#### for example u have a file called harsha file.txt then u need to find the file so u will use cmd "ls -l" , as a result u wont get the file in list because in linux spaces are not allowed 
+## 	to find these space named files we use cmd as 
+# ls -l "harsha file.txt"
+
+# 'ls -d' lists directory names not contents.
+
+
+# 4th july work
+
+# File and Directory Permissions
+
+
+1. Here is some output from an 'ls -l' command.And if you look at the permissions string **(-rw-r--r--)**
++ the first character will indicate
+ * whether it's a regular **file** by beginning with a **-**,
+ * or it will begin with the **'d'** if it's a **directory**,
+ * or an **'l'** if it's a **symbolic link.**
+
+
+2. r, w and x represent the 3 main types of permissions.
+
+ * They are read, which is r,
+
+* write, which is w,
+
+* and execute which is x.
+
+3. `-r--rw-rwx` Observe this First charecter represents **type**  that means in `-r--rw-rwx` **-** is a **file type**
+	* Observe this **Second 3 charecter** represents **user**  that means in `-r--rw-rwx` **r--** is a **User Permissions** . Represents with letter **u**
+	* Observe this **third 3 charecter** represents **group**  that means in `-r--rw-rwx` **rw-** is a **group Permissions** . Represents with letter **g**
+	* Observe this **Final 3 charecter** represents **other**  that means in `-r--rw-rwx` **rwx** is a **other Permissions**. Represents with letter **o**
+
+	4. if a particular permission is not granted, a hyphen will take its place.
+	* Permissions are also known as modes.
+	* That's why the command you used to change permissions is called `chmod`, which is short for **change mode**
+
+	5. We can change a file permissions by using following commands
+
+	* `chmode u+w harsha.txt`  results `-rw-rw-rwx`
+	* ` chmode g+x harsha.txt` results `-rw-rwxrwx`
+	* ` chmode o-w harsha.txt` results `-rw-rw-rw-`
+	* ` chmode u+wx harsha.txt` results `-rwxrw-rwx`
+
+	**Above commands are based by using symbolic(u,g,o) permissions**
+
+	**Numeric Commands based permissions**
+
+
+	**Here are the most commonly used permissions.** 
+
+* So 700 ensures that a file can be read, edited and executed by the owner and no one else on the system will have access to that file.
+* The 755 permission allows everyone on the system to execute the file but only the user or the owner of the file can edit that file.
+
+* 664 allows a group of people to modify the file and let others read it.
+
+* 660 allows a group of people to modify the file and not let others read it.
+
+* 644 allows everyone on the system to read the file but only the user or the owner of that file can edit that file.
+
+
+
+	* ` chmode 700 harsha.txt` results `-rwx-------`
+	* ` chmode 755 harsha.txt` results `-rwx-r-x--x`
+	* ` chmode 664 harsha.txt` results `-rw-rw-r--`
+
+* similarly so many numeric permissions are there 
+
+# find files and directories.
+
+1. If you don't tell find what to look for, it just returns all the files that are in your current directory.and all the subdirectories below that directory.
+  
+  * In terminal when u type ` find` results all the files that are in your current directory,and all the subdirectories below that directory.
+
+  * ` find . -name Downloads` here **.** indicates that u r in current directory , and **-name** that indicates what the file/directory name u r searching for, so here i am serching for "Downloads"  
+   * ` find . -iname Downloads` here **i** is for to ignore the name case either it may be small or capital letters it will show results
+
+   **You can search for files by modification time by using the '-mtime' option to find.**
+
+   * Let's look for files that are more than 10 days old, but less than 13 days old in the current directory.
+
+   **Command is**   ` find . -mtime +10 -mtime -13` 
+
+   **You can also search for files based on size using '-size'.**
+   * Let's look for files that are more than **1kb size**.
+
+   **Command is** ` find . -size +1k`
+     * Let's look for files that are more than **1mb size**.
+
+   **Command is** ` find . -size +1M`
+     * Let's look for files that are more than **1Gb size**.
+
+   **Command is** ` find . -size +1G`
+
+   
+#  about VI editor
+
+1.  VI(Visual Instrument), you can even use vi mode for editing shell commands.
+	* vi has the concept of modes.
+	* You are always working in one of three modes -
+
+	* **command mode**
+	* **insert mode** 
+	* **line mode.**
+
+	* **k** goes up one line, **j** down.
+
+	* **h** left, '**l** right one character.
+
+	* To move right one word, **w**,
+
+	* **b** moves back one word or left one word.
+
+	* The **^** symbol takes you to the beginning of the line
+
+	* while the **$** symbol takes you to the end of the line.
+
+
+	* In order to insert text in a file, enter vi's insert mode.
+
+	* Do this by pressing **i**
+
+	* **'I', 'a', or 'A'.**
+
+	* **'i'** inserts text at the current cursor position.
+
+	* **'I'** inserts text at the beginning of the line.
+
+	* **'a'** appends after the cursor position,
+
+	* **'A'** appends to the end of the line.
+
+	* to write the file or save the file, type **:w**, enter.
+	* To force a file to be saved, type **:w!**.
+
+	* To quit, **:q**, 
+	* to force quit, **:q!**.
+
+	* To save the file and quit, or write and quit, **:wq!**.
+
+	* And **:x** is the same as **:wq**
+
+	* if you want to go to the line 15 in the file, type **:15** enter.
+
+	* To go to the last line of the file, type **:$**.
+
+	* If you want to see line numbers, type **:set nu**.
+
+	* And to turn off line numbering, **:set nonu**.
+
+	* To get help, type **:help** and the command that you're interested in.
+
+	* Again the modes in vi or command mode which you can enter by hitting the **escape key.**
+
+	* While in command mode you can use **x** to delete a character.
+
+	* **dw** to delete a word,
+
+	* **dd** to delete a line
+
+	* and **D** to delete the remaining text on the line.
+
+
+	* To replace text, type **r** for just one character,
+
+	* **cw** to change an entire word,
+
+	* **cc** to change in entire line,
+
+	* **c$** to change the text from the current position to the end of the line.
+
+	* You can also use **C** for that.
+
+	* The **~** command reverses the case of the character.
+
+	* To yank or copy the current line, type **yy**
+
+	* To yank a position type **y** and a position character.
+
+	* For instance, to yank a word, type **yw**
+
+	* If we want to repeat this, you could yank 3 words with **y3w**.
+
+	* **p** will paste the most recently deleted or yanked text.
+
+	* The undo command in vi is **u**
+
+	* and the redo command is **ctrl-R**.
+
+	* To start a forward search, type **/** and a search pattern and hit enter.
+
+	* To go to the next match, type **n**.
+
+	* To go to the previous match, type **N**.
+
+	* To start a reverse search, use the '**?**
+	  
+# Delete , Copy , move files
+* want to delete some of them.To do that, use the **rm** command.
+
+**rm filename** is the simplest form of this command.
+
+* If you want to remove a directory and its contents recursively, use '**rm -r** and the name of the directory.
+
+* If you want a forced removal, use **rm-f**.
+
+* To copy files, use the **cp** command.
+
+* If you want to create a copy of a file, you just run **cp src_file destination_file**.
+
+* To run cp in interactive mode, use **cp -i**.If the destination file exists, cp will prompt you before it overwrites the file.
+
+* If you use **cp -r source_directory destination**,'cp' will recursively copy source directory into the destination directory.If the destination directory doesn't exist,it will create the destination directory.with the contents of the source directory.
+
+* To move or rename files, use the **mv** command.
+
+* If you were to run **mv source destination**, 'move' will move the source into the destination. Otherwise, source 	will be **renamed destination.**
+
+* If we run **mv file1 file2**,that will rename file1 to file2.It will overwrite file2.
+
+* If you want to do this in interactive mode, use **-i**.In this case it says, 'Hey there's a file that already exist. You want to overwrite it or not'?
+
+* **sort** is used for sorting
+
+* You can use sort with a **sort -k2**(removes the 2nd line,if u provide 3 it removes 3rd line) option and supply a field, so you can sort by a different field than the first field.
+
+* **sort -r** sorts in reverse order
+
+* and **sort -u** removes duplicate lines
+
+* You may want to create a copy or back up of a group of files.You may also have several files that you want to transfer at once or transfer as a set.In these situations, **tar** can help.
+
+* **tar cf what file name u r going to give.tar which file u r going to compress**  Create a tar archive.
+* **tar tf  which tar file u want to see** it shows the directory and files 
+
+similarlly.......
+
+* **x** Extract files from the archive.
+* **v** Be verbose.
+* **z** Use compression.
+
+### Compressing Files To Save Space
+
+* **gzip filename** Compress files.
+* **gunzip filename** Uncompress files.
+* **gzcat filename** Concatenates compressed files.
+* **zcat filename** Concatenates compressed files.
+
+
+### Disk Usage
+
+* **du** Estimates file usage.
+* **du -k** Display sizes in Kilobytes.
+* **du -h** Display sizes in human readable format.
+
+# 5th july Work
+
+
+### Wildcards
+
+**A wildcard is a character or a string that is used to match file and directory names.**
+
+* Here are the 2 main wildcards.They are the **asterisk(*)** and the **question mark(?)**.
+
+* For example, we could use ***.txt** to find all the files that end in '.txt'.
+
+* If you wanted to list all the files that start with the letter **a**, then use **a***.
+
+* If you want to find all the files that start with an **a** and end in **.txt**, then use **a*.txt**.
+
+● Use two characters separated by a hyphen to
+create a range in a character class.
+
+● [a-g]* ----->Matches all files that start with a, b, c, d, e, f, or g.
+
+● [3-6]*   -----> Matches all files that start with 3, 4, 5 or 6.
+
+* If you want to find all the files that start with an **a-d**, then use **ls [a-d]***
+* we can find files that u remember first letter and last letter ,then use **ls firstletter[abcd]lastletter** 
+ Ex:firstletter is c , last letter is t, then **ls c[aeiou]t**  
+
+ * * - matches zero or more characters.
+* *.txt
+* a*
+* a*.txt
+	* ? - matches exactly one character.
+* ?.txt
+* a?
+* a?.txt
+
+* Named Character Classes
+● [[:alpha:]]
+● [[:alnum:]]
+● [[:digit:]]
+● [[:lower:]]
+● [[:space:]]
+● [[:upper:]]
+
+
+### Comparing the Contents of Files
+* **diff file1 file2**   Compare two files.
+* **sdiff file1 file2**  Side-by-side comparison.
+* **vimdiff file1 file2**    Highlight differences in vim.
+
+### vimdiff commands
+* **Ctrl-w w** Go to next window
+* **:q** Quit (close current window)
+* **:qa** Quit all (close both files)
+* **:qa!** Force quit all
+
+
+### Searching in Files
+
+#### The grep Command
+ * grep Display lines matching a pattern.
+ * grep pattern filename **EX: grep user table.txt**
+
+
+ #### grep Options
+
+* **-i** Perform a search, ignoring case.
+* **-c** Count the number of occurrences in a file.
+* **-n** Precede output with line numbers.
+* **-v** Invert Match. Print lines that don’t match.
+
+#### use of file command
+	* **file** file_name Display the file type.and shows all the information of file_name
+
+#### Searching for Text in Binary Files
+
+* use **strings filename** to Display printable strings.
